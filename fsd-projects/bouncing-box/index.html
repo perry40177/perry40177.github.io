@@ -87,11 +87,6 @@
         var positionY = 100;
         var speedY = 10;
         var boardHeight = jQuery(window).height();
-        var randNum = Math.random() * 100;
-        var misclicks = 0
-        var colorStr = "rgb(50, 25, 250)";
-        box.css ("background-color", colorStr);
-        var randomNumberBetween0and255 = Math.random() * 255;
 
 
 
@@ -137,14 +132,16 @@
           points += 1;
           speed = 3 * points + 10;
           speedY = 3 * points + 10;
+          var randX = Math.random() * (boardWidth);
+          var randY = Math.random () * (boardHeight);
+          positionY = randY
+          positionX = randX
           changeBoxText(points);
 
           function endGame() {
             clearInterval(inverval);
 
-          function getRandomColor() {
-            colorStr = randomNumberBetween0and255
-          }
+          
 
 
           }
